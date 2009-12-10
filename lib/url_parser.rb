@@ -17,7 +17,7 @@
 
 class UrlParser
   
-  URL_REGEXP = /(^$)|(^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$)/ix.freeze
+  URL_REGEXP = /(^$)|(^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}((:[0-9]{1,5})?\/.*)?$)/ix.freeze
 
   def self.is_url url
     not (url =~ URL_REGEXP).nil?
